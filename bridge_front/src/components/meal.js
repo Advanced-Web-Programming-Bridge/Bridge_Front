@@ -1,35 +1,38 @@
 import { React } from 'react';
-import styled from 'styled-component'
+import styled from "styled-components"
+import MealList from './meal_list';
 import styles from './style/meal.module.css'
+let number = Number(0)
 
-const Meal = () => {
+const Meal = (props) => {
     return (
         //전체 Warpper
-        <div className='meal_flexer'>
+        <div className={styles.meal_flexer}>
 
             {/** Meal Header 사진 div*/}
-            <div className='meal_header'>
-                Meal
+            <div className={styles.meal_header}>
+                <p id={styles.header_text}>Meal</p>
             </div>
 
             {/** Meal 오늘의 식단 정보 div*/}
-            <div className='today_info'>
-                <Progressbar>
-                    <Delta />
-                </Progressbar>
+            <div className={styles.today_info}>
+                <div id={styles.progress_bar}>
+                    Progressbar
+                </div>
+                <div id={styles.today_meals}>
+                    <MealList />
+                </div> 
             </div>
 
             {/** 캘린더와 식단 리스트 블럭의 가로 배치를 위한 플랙서*/}
-            <div className='calendar_flexer'>
+            <div className={styles.calendar_flexer}>
                 {/** 캘린더 div  */}
-                <div className='meal_calendar'>
+                <div className={styles.meal_calendar}>
                     Calendar
                 </div>
                 {/** 식단 list div */}
-                <div className='meal_list'>
-                    <p>아침</p>
-                    <p>점심</p>
-                    <p>저녁</p>
+                <div className={styles.meal_list}>
+                    <MealList />
                 </div>
             </div>
 
