@@ -1,0 +1,35 @@
+.meal_flexer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+.meal_header{
+    width: 100%;
+}
+
+.today_info{
+    margin-left: 10%;
+    margin-left: 10%;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+}
+
+.calendar_flexer{
+    margin-left: 10%;
+    margin-left: 10%;
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    align-content: center;
+}
+
+.meal_calendar{
+    width: 50%;
+    height: fit-content;
+}
+.meal_list{
+    width: 50%;
+    height: fit-content;
+}
