@@ -1,0 +1,47 @@
+/* Exercise Header 전용 CSS */
+.header {
+    background-color: black;
+    background-image: url("../static/image/exercise.jpg");
+    height: 50vh;
+    position: relative;
+}
+
+.header-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-letter {
+    font-size: 8vh;
+    color: white;
+}
+
+/* Exercise Body 전용 CSS */
+.body {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5vh;
+    width: 80%;
+    display: flex;
+}
+.checkbox-group{
+    width: 50%;
+}
+
+.checkbox {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 40%;
+}
+
+.checkbox-input {
+    transform: scale(1.5);
+}
+
+.checkbox-label {
+    margin-left: 0.5vw;
+    font-size: 2vw;
+}
