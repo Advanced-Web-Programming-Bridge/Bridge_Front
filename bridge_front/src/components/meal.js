@@ -1,8 +1,8 @@
 import { React } from 'react';
-import styled from "styled-components"
 import MealList from './meal_list';
 import styles from './style/meal.module.css'
-let number = Number(0)
+import StyledCalendar from './calendar.js'
+
 
 const Meal = (props) => {
     return (
@@ -28,7 +28,7 @@ const Meal = (props) => {
             <div className={styles.calendar_flexer}>
                 {/** 캘린더 div  */}
                 <div className={styles.meal_calendar}>
-                    Calendar
+                    <StyledCalendar />
                 </div>
                 {/** 식단 list div */}
                 <div className={styles.meal_list}>
@@ -40,17 +40,4 @@ const Meal = (props) => {
     );
 }
 
-//Progressbar 임시 구현 (수정 예정)
-const Progressbar = styled.div`
-    width: 60dp;
-    height: 10dp;
-    background-color: white;
-`;
-
-//Progressbar 진행도 임시 구현 (수정 예정)
-const Delta = styled.div<{delta: number}>`
-    background-color: ${(props) => props.theme.redColor};
-    width: ${(props) => props.delta + "%"}
-    height: 100%
-`;
 export default Meal;
