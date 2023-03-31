@@ -3,9 +3,9 @@ import Button from "react-bootstrap/Button";
 
 function ExerciseHeader() {
   return (
-    <div class="header">
-      <div class="header-child">
-        <div class="header-letter">Exercise</div>
+    <div className="header">
+      <div className="header-child">
+        <div className="header-letter">Exercise</div>
         <div>
           <Button variant="link" id="button1">
             Link 1
