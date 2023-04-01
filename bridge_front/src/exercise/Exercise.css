@@ -24,8 +24,12 @@
     margin-right: 10%;
     margin-top: 5vh;
     width: 80%;
+}
+
+.today {
     display: flex;
 }
+
 .checkbox-group{
     width: 50%;
 }
@@ -44,4 +48,8 @@
 .checkbox-label {
     margin-left: 0.5vw;
     font-size: 2vw;
+}
+
+.calendar {
+    margin-top: 10vh;
 }

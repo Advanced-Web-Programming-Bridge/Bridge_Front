@@ -10,6 +10,8 @@ import Exercise from './exercise/Exercise';
 function App() {
   return (
     <div className="App">
+      {/* <NavBar/>
+      <Home/> */}
       <Exercise />
     </div>
   );
