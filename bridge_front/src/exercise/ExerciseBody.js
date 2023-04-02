@@ -37,9 +37,19 @@ function ExerciseBody() {
         </ExerciseContext.Provider>
       </div>
 
-      {/* calendar */}
-      <div className="calendar">
-        <StyledCalendar />
+      <div className="record">
+
+        {/* calendar */}
+        <div className="body-div3">
+          <div className="calendar">
+            <StyledCalendar />
+          </div>
+        </div>
+
+        {/* 해당 날짜에 뭐 해야하는지, 했는지 정보 */}
+        <div className="body-div4">
+          
+        </div>
       </div>
     </div>
   );

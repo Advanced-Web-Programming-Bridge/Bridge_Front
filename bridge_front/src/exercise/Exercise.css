@@ -35,6 +35,8 @@
     width: 50%;
 }
 
+
+
 .body-div2 {
     width: 50%;
     position: relative;
@@ -63,6 +65,29 @@
     font-size: 2vw;
 }
 
-.calendar {
+
+
+.record {
+    display: flex;
     margin-top: 10vh;
+    height: 50vh;
+}
+
+.body-div3 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.calendar {
+    position: absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.body-div4 {
+    width: 50%;
+    height: 100%;
 }
