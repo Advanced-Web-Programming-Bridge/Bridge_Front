@@ -28,17 +28,30 @@
 
 .today {
     display: flex;
+    height: 10%;
 }
 
-.checkbox-group{
+.progress-bar {
     width: 50%;
+}
+
+.body-div2 {
+    width: 50%;
+    position: relative;
+}
+
+.checkbox-group {
+    position: absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .checkbox {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding-left: 40%;
+    /* padding-left: 40%; */
 }
 
 .checkbox-input {

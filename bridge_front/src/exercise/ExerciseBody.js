@@ -12,22 +12,24 @@ function ExerciseBody() {
     <div className="body">
       <div className="today">
         {/* progress bar */}
-        <ProgressBar
-          width="500px"
-          height="10px"
-          fontColor="white"
-          trackWidth="10"
-          percentage={percent}
-          trackPathColor="grey"
-          trackBorderColor="black"
-          hollowBackgroundColor="#333333"
-          defColor={{
-            fair: "orangered",
-            good: "yellow",
-            excellent: "green",
-            poor: "red",
-          }}
-        />
+        <div className="progress-bar">
+          <ProgressBar
+            width="1"
+            height="1"
+            fontColor="white"
+            trackWidth="10"
+            percentage={percent}
+            trackPathColor="grey"
+            trackBorderColor="black"
+            hollowBackgroundColor="#333333"
+            defColor={{
+              fair: "orangered",
+              good: "yellow",
+              excellent: "green",
+              poor: "red",
+            }}
+          />
+        </div>
 
         {/* 오늘 뭐 해야하는지 보여주는 화면. useContext를 활용해 하위 component에서 percent를 변경할 수 있도록 함 */}
         <ExerciseContext.Provider value={{ percent, setPercent }}>
@@ -35,6 +37,7 @@ function ExerciseBody() {
         </ExerciseContext.Provider>
       </div>
 
+      {/* calendar */}
       <div className="calendar">
         <StyledCalendar />
       </div>

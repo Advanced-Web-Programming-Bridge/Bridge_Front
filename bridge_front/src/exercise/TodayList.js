@@ -55,21 +55,23 @@ function TodayList() {
 
   // 오늘 해야하는 list를 돌며 화면에 출력
   return (
-    <div className="checkbox-group">
-      {todoList.map((item, index) => (
-        <div className="checkbox" key={index}>
-          <input
-            className="checkbox-input"
-            type="checkbox"
-            id={item}
-            checked={checkedlist.includes(item)}
-            onChange={(e) => checkHandler(e, item)}
-          />
-          <label className="checkbox-label" htmlFor={item}>
-            {item}
-          </label>
-        </div>
-      ))}
+    <div className="body-div2">
+      <div className="checkbox-group">
+        {todoList.map((item, index) => (
+          <div className="checkbox" key={index}>
+            <input
+              className="checkbox-input"
+              type="checkbox"
+              id={item}
+              checked={checkedlist.includes(item)}
+              onChange={(e) => checkHandler(e, item)}
+            />
+            <label className="checkbox-label" htmlFor={item}>
+              {item}
+            </label>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
