@@ -11,12 +11,49 @@
 .meal_header{
     width: 100%;
     height: 50vh;
+    margin-bottom: 3rem;
     background-image: url("../../meal_header.jpeg");
     background-repeat: no-repeat;
     Background-size: cover;
     position: relative;
 }
 
+/*header button wrapper*/
+#header_ref_buttons{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*header buttons*/
+#header_today_ref_btn{
+    width: 8vw;
+    height: 5vh;
+    opacity: 0.9;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    background-color: skyblue;
+    font-family: Pretended;
+}
+#header_today_ref_btn:hover{
+    opacity: 1;
+}
+#header_monthly_ref_btn{
+    width: 8vw;
+    height: 5vh;
+    opacity: 0.9;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    background-color: skyblue;
+    font-family: Pretended;
+    margin-left: 1rem;
+}
+#header_montly_ref_btn:hover{
+    opacity: 1;
+}
 /*Header Text*/
 #header_text{
     width: 100%;
@@ -26,7 +63,6 @@
     position: absolute;
     text-align: center;
     top: 40%;
-    text-align: center;
 
     /*글씨 폰트 스타일*/
     color: white;
@@ -39,27 +75,36 @@
 .today_info{
     margin-top: 1rem;
     margin-left: 10%;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
     margin-right: 10%;
     width: 80%;
-    height: 30vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
 }
 
-#progress_bar {
-    width: 50%
+#today_text{
+    font-size: 20px;
+    font-family: Pretended;
 }
+
+#progress_bar {
+    width: 50%;
+    padding-top: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
 #today_meals {
     width: 50%;
 }
 
 /*캘린더와 식단 리스트 블럭의 가로 배치를 위한 플랙서*/
 .calendar_flexer{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 5vh 10% 3rem 10%;
+
     width: 80%;
-    height: 30vh;
+    height: fit-content;
     display: flex;
     justify-content: center;
 }
@@ -76,6 +121,34 @@
 .meal_list{
     width: 50%;
     height: fit-content;
+}
+
+.meal_list_target_cal{
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.target_cal_receiver{
+    width: 8vw;
+    height: 5vh;
+    border: none;
+    font-size: 20pt;
+    background-color: #e6e6fa;
+    font-family: Pretended;
+}
+
+.target_cal_sender{
+    width: 8vw;
+    height: 5vh;
+    opacity: 0.6;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    background-color: skyblue;
+    font-family: Pretended;
+    
+}
+.target_cal_sender:hover{
+    opacity: 1;
 }
