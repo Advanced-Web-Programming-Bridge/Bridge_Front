@@ -18,23 +18,47 @@
     color: white;
 }
 
+.links {
+    display: flex;
+    justify-content: center;
+}
+
 /* Exercise Body 전용 CSS */
 .body {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5vh;
     width: 80%;
-    display: flex;
 }
-.checkbox-group{
+
+.today {
+    display: flex;
+    height: 10%;
+}
+
+.progress-bar {
     width: 50%;
+}
+
+
+
+.body-div2 {
+    width: 50%;
+    position: relative;
+}
+
+.checkbox-group {
+    position: absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .checkbox {
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    padding-left: 40%;
+    /* padding-left: 40%; */
 }
 
 .checkbox-input {
@@ -44,4 +68,31 @@
 .checkbox-label {
     margin-left: 0.5vw;
     font-size: 2vw;
+}
+
+
+
+.record {
+    display: flex;
+    margin-top: 10vh;
+    height: 50vh;
+}
+
+.body-div3 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.calendar {
+    position: absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.body-div4 {
+    width: 50%;
+    height: 100%;
 }
