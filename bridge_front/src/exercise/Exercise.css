@@ -18,6 +18,11 @@
     color: white;
 }
 
+.links {
+    display: flex;
+    justify-content: center;
+}
+
 /* Exercise Body 전용 CSS */
 .body {
     margin-left: 10%;
