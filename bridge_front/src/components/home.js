@@ -1,9 +1,9 @@
 import React from "react";
-import "./Home.css";
+import "./home.css";
 
 function Home(){
     return(
-        <button className="btn">External</button>
+        <img className="header1" src="./img/header.jpg" alt="First slide"/>
     );
 }
 
