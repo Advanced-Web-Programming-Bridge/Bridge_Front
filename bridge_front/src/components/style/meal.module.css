@@ -27,6 +27,7 @@
 }
 
 /*header buttons*/
+/*헤더 좌측 버튼*/
 #header_today_ref_btn{
     width: 8vw;
     height: 5vh;
@@ -37,9 +38,11 @@
     background-color: skyblue;
     font-family: Pretended;
 }
+/*헤더 좌측 버튼 호버링*/
 #header_today_ref_btn:hover{
     opacity: 1;
 }
+/*헤더 우측 버튼*/
 #header_monthly_ref_btn{
     width: 8vw;
     height: 5vh;
@@ -51,6 +54,7 @@
     font-family: Pretended;
     margin-left: 1rem;
 }
+/*헤더 우측 버튼 호버링*/
 #header_montly_ref_btn:hover{
     opacity: 1;
 }
@@ -123,12 +127,14 @@
     height: fit-content;
 }
 
+/*하루 목표 칼로리 설정 부분 Wrapper*/
 .meal_list_target_cal{
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
+/*하루 목표 칼로리 숫자 적는 input*/
 .target_cal_receiver{
     width: 8vw;
     height: 5vh;
@@ -138,6 +144,7 @@
     font-family: Pretended;
 }
 
+/*하루 목표 칼로리 전송 버튼*/
 .target_cal_sender{
     width: 8vw;
     height: 5vh;
@@ -149,6 +156,7 @@
     font-family: Pretended;
     
 }
+/*하루 목표 칼로리 전송 버튼 호버링*/
 .target_cal_sender:hover{
     opacity: 1;
 }
