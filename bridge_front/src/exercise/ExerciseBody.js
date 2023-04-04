@@ -4,6 +4,7 @@ import "./Exercise.css";
 import { ExerciseContext } from "./ExerciseContext";
 import TodayList from "./TodayList";
 import StyledCalendar from "../components/calendar.js";
+import DayList from "./DayList";
 
 function ExerciseBody() {
   const [percent, setPercent] = useState(0);
@@ -46,10 +47,8 @@ function ExerciseBody() {
           </div>
         </div>
 
-        {/* 해당 날짜에 뭐 해야하는지, 했는지 정보 */}
-        <div className="body-div4">
-          
-        </div>
+        {/* 해당 날짜에 뭐 해야하는지 정보 */}
+        <DayList />
       </div>
     </div>
   );
