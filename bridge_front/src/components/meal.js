@@ -28,17 +28,17 @@ const Meal = (props) => {
         setCurrentDate(moment(e).format("YYYY-MM-DD"))
     };
 
-    //해더 버튼이 바라보는 Ref
-    const todayRef = useRef();
-    const monthlyRef = useRef();
+    // //해더 버튼이 바라보는 Ref
+    // const todayRef = useRef();
+    // const monthlyRef = useRef();
     
-    //헤더 버튼 onClick handler
-    const onTodayClick = () => {
-        todayRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
-    const onMonthlyClick = () => {
-        monthlyRef.current?.scrollIntoView({ behavior: 'smooth' });
-    };
+    // //헤더 버튼 onClick handler
+    // const onTodayClick = () => {
+    //     todayRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // };
+    // const onMonthlyClick = () => {
+    //     monthlyRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // };
 
     return (
         //전체 Warpper
@@ -46,16 +46,16 @@ const Meal = (props) => {
             {/** Meal Header 사진 div*/}
             <div className={styles.meal_header}>
                 <p id={styles.header_text}>Meal</p>
-                <div id={styles.header_ref_buttons}>
+                {/* <div id={styles.header_ref_buttons}>
                     <button id={styles.header_today_ref_btn} onClick={onTodayClick}>오늘 식단</button>
                     <button id={styles.header_monthly_ref_btn} onClick={onMonthlyClick}>이번달 식단 계획</button>
-                </div>
+                </div> */}
             </div>
 
             <h2>오늘 얼마나 먹었나요?</h2>
             <StyledHr />
             {/** Meal 오늘의 식단 정보 div*/}
-            <div className={styles.today_info} ref={todayRef}>
+            <div className={styles.today_info}>
                 
                 <div id={styles.progress_bar}>
                     <ProgressBar
@@ -82,7 +82,7 @@ const Meal = (props) => {
             <h2>이번달 식단 진행한 내용이에요</h2>
             <StyledHr />
             {/** 캘린더와 식단 리스트 블럭의 가로 배치를 위한 플랙서*/}
-            <div className={styles.calendar_flexer} ref={monthlyRef}>
+            <div className={styles.calendar_flexer}>
                 {/** 캘린더 div  */}
                 <div className={styles.meal_calendar}>
                     <Calendar onChange={calendarOnChange}/>
