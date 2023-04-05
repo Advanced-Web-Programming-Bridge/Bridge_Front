@@ -1,9 +1,17 @@
 import React from "react";
-import "./Home.css";
+import "./home.css";
 
 function Home(){
     return(
-        <button className="btn">External</button>
+        <div className="home">
+          <div className="header"></div>
+          <div className="exercise">
+            <div className="exercise_banner"></div>
+          </div> 
+        </div>
+        
+
+      
     );
 }
 
