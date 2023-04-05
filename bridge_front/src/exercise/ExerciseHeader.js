@@ -1,26 +1,27 @@
 import "./Exercise.css";
-import Button from "react-bootstrap/Button";
+import styled from 'styled-components';
+
+const introduce =
+  "FitLog은 운동 내용을 기록하고, 과거의 운동 기록을 볼 수 있는 건강한 삶을 위한 웹 서비스입니다.\n" +
+  "운동 루틴을 체크하고, 목표에 맞게 관리하여 건강한 삶을 시작해보세요."
+
+const StyledExercise = styled.div`
+  font-size: 8vh;
+  color: white;
+`;
+
+const StyledIntroduce = styled.div`
+  white-space: pre-wrap;
+  font-size: 2vh;
+  color: white;
+`;
 
 function ExerciseHeader() {
   return (
     <div className="header">
       <div className="header-child">
-        <div className="header-letter">Exercise</div>
-        <div className="links">
-          {/* class name me-3은 margin end를 3만큼 주겠다라는 의미 */}
-          <div className="me-3">
-            <Button variant="link" id="button1">
-              Link 1
-            </Button>
-          </div>
-
-          {/* class name ms-3은 margin start를 3만큼 주겠다라는 의미 */}
-          <div className="ms-3">
-            <Button variant="link" id="button2">
-              Link 2
-            </Button>
-          </div>
-        </div>
+        <StyledExercise>Exercise</StyledExercise>
+        <StyledIntroduce>{introduce}</StyledIntroduce>
       </div>
     </div>
   );
