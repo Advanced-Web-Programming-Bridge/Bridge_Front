@@ -1,7 +1,3 @@
-:root{
-    font-family: Pretended;
-}
-
 .meal_flexer{
     width: 100%;
     height: fit-content;
@@ -132,6 +128,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    vertical-align: middle;
+}
+.meal_list_target_cal > h4{
+    font-size: 4em;
+    font-family: Pretended;
+    vertical-align: middle;
 }
 
 /*하루 목표 칼로리 숫자 적는 input*/
