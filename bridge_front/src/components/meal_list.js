@@ -30,7 +30,7 @@ const StyledMealList = styled.div`
 const StyledMealItem = styled.div`
     display: ${(props) => props.display}
 `
-
+//~에 ~만큼 먹었어요를 감싸는 Wrapper
 const MealItemFlexer = styled.div`
     display:flex;
     justfy-content: space-between;
@@ -60,12 +60,14 @@ const StyledInput = styled.input`
 const StyledSender = styled.button`
     width: 8vw;
     height: 5vh;
+    margin-top: 2vh;
     border: none;
     border-radius: 8px;
     background-color: skyblue;
     opacity: 0.6;
     font-family: Pretended;
     cursor: pointer;
+    
     display: ${(props) => props.sender_display};
     :hover{
         opacity: 1;
@@ -75,9 +77,9 @@ const StyledSender = styled.button`
 //Component
 const MealList = (props) => {
     //아침, 점심, 저녁 버튼 아래에 있는 div display 상태
-    const [breakfast, setBreakfast] = useState('none');
-    const [lunch, setLunch] = useState('none');
-    const [dinner, setDinner] = useState('none');
+    const [breakfast, setBreakfast] = useState('block');
+    const [lunch, setLunch] = useState('block');
+    const [dinner, setDinner] = useState('block');
 
     //아침, 점심, 저녁에 먹은 칼로리를 입력 받게 되는 State
     const [breakfastValue, setBreakfastValue] = useState(0)
@@ -87,11 +89,11 @@ const MealList = (props) => {
     //아침 버튼을 클릭하면 나오고 사라지고
     const handleBreakfastClick = () => {
         if (!breakfast_v) {
-            setBreakfast('block');
+            setBreakfast('none');
             breakfast_v = true;
         }
         else {
-            setBreakfast('none');
+            setBreakfast('block');
             breakfast_v = false;
         }
     };
@@ -99,11 +101,11 @@ const MealList = (props) => {
     //점심 버튼을 클릭하면 나오고 사라지고
     const handleLunchClick = () => {
         if (!lunch_v) {
-            setLunch('block')
+            setLunch('none')
             lunch_v = true;
         }
         else {
-            setLunch('none')
+            setLunch('block')
             lunch_v = false;
         }
     }
@@ -111,11 +113,11 @@ const MealList = (props) => {
     //저녁 버튼을 클릭하면 나오고 사라지고
     const handleDinnerClick = () => {
         if (!dinner_v) {
-            setDinner('block')
+            setDinner('none')
             dinner_v = true;
         }
         else {
-            setDinner('none')
+            setDinner('block')
             dinner_v = false;
         }
     }
@@ -161,7 +163,7 @@ const MealList = (props) => {
                 </MealItemFlexer>
             </StyledMealItem>
 
-            <StyledSender onClick={dataSender} display={props.sender_display}>
+            <StyledSender onClick={dataSender} sender_display={props.sender_display}>
                 전송
             </StyledSender>
         </StyledWrapper> 

@@ -3,27 +3,36 @@ import MealList from './meal_list';
 import styles from './style/meal.module.css';
 import ProgressBar from "react-animated-progress-bar";
 import Calendar from "react-calendar";
-import 'react-calendar/dist/Calendar.css';
+import './style/calendar.css'
 import moment from 'moment';
 import 'moment/locale/ko';
 import styled from 'styled-components';
 
+// 각 부분 구분하는 가로 줄
 const StyledHr = styled.hr`
+    margin-left: 10%;
+    margin-right: 10%;
     width: 80%;
 `;
 
 const Meal = (props) => {
+    //Progress bar 퍼센트 state
     const [percent, setPercent] = useState(0);
+    //캘린더에서 선택한 날짜를 담는 state
     const [currentDate, setCurrentDate] = useState();
+    //캘린더에서 선택한 날짜의 목표 칼로리 기본값 1-> Divide by 0 오류 피하기 위해 1로 기본
     const [targetCal, setTargetCal] = useState(1);
 
+    //캘린더에서 클릭을 하면 (Focus on change)
     const calendarOnChange = (e) => {
         setCurrentDate(moment(e).format("YYYY-MM-DD"))
     };
 
+    //해더 버튼이 바라보는 Ref
     const todayRef = useRef();
     const monthlyRef = useRef();
     
+    //헤더 버튼 onClick handler
     const onTodayClick = () => {
         todayRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
