@@ -44,14 +44,6 @@ const StyledExerciseImage = styled.div`
 const StyledBody3 = styled.div`
   width: 50%;
   height: 100%;
-  position: relative;
-`;
-
-const StyledCalendar = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 `;
 
 const StyledBody4 = styled.div`
@@ -87,6 +79,7 @@ function ExerciseBody() {
     <StyledBody>
       <h2>오늘 계획한 운동량입니다.</h2>
       <StyledBorder />
+
       <StyledToday>
         {/* Image와 프로그래스바 */}
         <StyledBody1>
@@ -98,28 +91,25 @@ function ExerciseBody() {
         <ExerciseContext.Provider value={{ percent, setPercent }}>
           <TodayList />
         </ExerciseContext.Provider>
-
       </StyledToday>
 
       <h2>과거에 수행하였거나, 미래에 실행할 예정인 운동입니다.</h2>
       <StyledBorder />
-      <div className="record">
 
+      <div className="record">
         {/* calendar. useContext를 활용해 하위 component에서 click된 날자를 변경할 수 있도록 함 */}
         <StyledBody3>
-          <StyledCalendar>
-            <ExerciseContext.Provider value={{ date, setDate }}>
-              <ExerciseCalendar />
-            </ExerciseContext.Provider>
-          </StyledCalendar>
+          <ExerciseContext.Provider value={{ date, setDate }}>
+            <ExerciseCalendar />
+          </ExerciseContext.Provider>
         </StyledBody3>
 
         {/* 해당 날짜에 뭐 해야하는지, 했는지 정보 */}
         <StyledBody4>
           <ExerciseList exerciseData={exerciseData} />
         </StyledBody4>
-
       </div>
+      
     </StyledBody>
   );
 }
