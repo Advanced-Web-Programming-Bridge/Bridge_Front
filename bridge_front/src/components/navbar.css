@@ -1,9 +1,13 @@
 .navbar {
-    position: sticky;
-    background-color: pink;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
 
-    height: 6vh;
+    height: 7vh;
+    overflow-x: auto;
+}
+
+.logo { 
+    height: 5vh;
 }

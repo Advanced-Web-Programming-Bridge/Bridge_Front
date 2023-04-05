@@ -12,7 +12,9 @@ function OffcanvasExample() {
       {['xl'].map((expand) => (
         <Navbar key={expand} bg="light" expand={expand}>
           <Container fluid className='navbar'>
-            <Navbar.Brand href="#">DEM</Navbar.Brand>
+            <Navbar.Brand href="#">
+              <img className="logo" src="./img/logo.png" alt="logo image"/> FitLog
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
