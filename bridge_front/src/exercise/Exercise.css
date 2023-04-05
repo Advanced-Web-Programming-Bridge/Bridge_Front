@@ -13,16 +13,6 @@
     transform: translate(-50%, -50%);
 }
 
-.header-letter {
-    font-size: 8vh;
-    color: white;
-}
-
-.links {
-    display: flex;
-    justify-content: center;
-}
-
 /* Exercise Body 전용 CSS */
 .body {
     margin-left: 10%;
