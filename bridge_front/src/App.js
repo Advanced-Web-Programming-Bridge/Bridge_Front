@@ -5,6 +5,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './components/home';
 import Footer from './components/footer';
+import Exercise from './exercise/Exercise';
 
 function App() {
   return (
