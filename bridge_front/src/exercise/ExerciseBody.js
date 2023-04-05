@@ -3,9 +3,10 @@ import "./Exercise.css";
 import { ExerciseContext } from "./ExerciseContext";
 import TodayList from "./TodayList";
 import ExerciseCalendar from "./ExerciseCalendar";
-import styled from 'styled-components';
+import styled from "styled-components";
 import exercise from "../static/image/exercise.jpg";
-import ProgressBar from 'react-bootstrap/ProgressBar';
+import ProgressBar from "react-bootstrap/ProgressBar";
+import ExerciseList from "./ExerciseList";
 
 const StyledBody = styled.div`
   margin-left: 10%;
@@ -28,8 +29,8 @@ const StyledToday = styled.div`
 const StyledBody1 = styled.div`
   width: 50%;
   padding-top: 5%;
-  padding-left:3%;
-  padding-right:3%
+  padding-left: 3%;
+  padding-right: 3%;
 `;
 
 const StyledExerciseImage = styled.div`
@@ -40,41 +41,84 @@ const StyledExerciseImage = styled.div`
   height: 60%;
 `;
 
+const StyledBody3 = styled.div`
+  width: 50%;
+  height: 100%;
+  position: relative;
+`;
+
+const StyledCalendar = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+const StyledBody4 = styled.div`
+  width: 50%;
+  height: 100%;
+`;
+
 function ExerciseBody() {
   const [percent, setPercent] = useState(0);
   const [date, setDate] = useState(new Date());
+
+  const exerciseData = {
+    date: new Date().toString(),
+    exerciseList: [
+      {
+        category: "가슴",
+        list: [
+          "벤치 프레스",
+          "덤벨 벤치 프레스",
+          "클라인 벤치 프레스",
+          "딥스",
+          "케이블 크로스 오버",
+        ],
+      },
+      {
+        category: "유산소",
+        list: ["달리기", "자전거", "등산"],
+      },
+    ],
+  };
 
   return (
     <StyledBody>
       <h2>오늘 계획한 운동량입니다.</h2>
       <StyledBorder />
       <StyledToday>
-
         {/* Image와 프로그래스바 */}
         <StyledBody1>
           <StyledExerciseImage />
           <ProgressBar animated now={percent} />
         </StyledBody1>
-        
+
         {/* 오늘 뭐 해야하는지 보여주는 화면. useContext를 활용해 하위 component에서 percent를 변경할 수 있도록 함 */}
         <ExerciseContext.Provider value={{ percent, setPercent }}>
           <TodayList />
         </ExerciseContext.Provider>
+
       </StyledToday>
 
+      <h2>과거에 수행하였거나, 미래에 실행할 예정인 운동입니다.</h2>
       <StyledBorder />
       <div className="record">
+
         {/* calendar. useContext를 활용해 하위 component에서 click된 날자를 변경할 수 있도록 함 */}
-        <div className="body-div3">
-          <div className="calendar">
+        <StyledBody3>
+          <StyledCalendar>
             <ExerciseContext.Provider value={{ date, setDate }}>
               <ExerciseCalendar />
             </ExerciseContext.Provider>
-          </div>
-        </div>
+          </StyledCalendar>
+        </StyledBody3>
 
         {/* 해당 날짜에 뭐 해야하는지, 했는지 정보 */}
-        <div className="body-div4"></div>
+        <StyledBody4>
+          <ExerciseList exerciseData={exerciseData} />
+        </StyledBody4>
+
       </div>
     </StyledBody>
   );

@@ -8,6 +8,8 @@ function ExerciseCalendar() {
 
   function handleClick(date) {
     setDate(date);
+
+    // Todo: 해당 날짜에 무엇을 하는지 서버로부터 받아오기
     console.log(date);
   }
 
