@@ -1,7 +1,7 @@
 /* Exercise Header 전용 CSS */
 .header {
     background-color: black;
-    background-image: url("../static/image/exercise.jpg");
+    background-image: url("../static/image/exercise-header.jpg");
     height: 50vh;
     position: relative;
 }
@@ -14,23 +14,6 @@
 }
 
 /* Exercise Body 전용 CSS */
-.body {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5vh;
-    width: 80%;
-}
-
-.today {
-    display: flex;
-    height: 10%;
-}
-
-.progress-bar {
-    width: 50%;
-}
-
-
 
 .body-div2 {
     width: 50%;
