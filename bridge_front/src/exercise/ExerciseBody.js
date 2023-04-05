@@ -3,10 +3,11 @@ import { useState } from "react";
 import "./Exercise.css";
 import { ExerciseContext } from "./ExerciseContext";
 import TodayList from "./TodayList";
-import StyledCalendar from "../components/calendar.js";
+import ExerciseCalendar from "./ExerciseCalendar";
 
 function ExerciseBody() {
   const [percent, setPercent] = useState(0);
+  const [date, setDate] = useState(new Date());
 
   return (
     <div className="body">
@@ -39,10 +40,12 @@ function ExerciseBody() {
 
       <div className="record">
 
-        {/* calendar */}
+        {/* calendar. useContext를 활용해 하위 component에서 click된 날자를 변경할 수 있도록 함 */}
         <div className="body-div3">
           <div className="calendar">
-            <StyledCalendar />
+            <ExerciseContext.Provider value={{ date, setDate }}>
+              <ExerciseCalendar />
+            </ExerciseContext.Provider>
           </div>
         </div>
 
