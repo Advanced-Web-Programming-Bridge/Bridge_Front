@@ -1,0 +1,33 @@
+.home {
+    margin-top: 7vh; 
+}
+
+.header_div {
+    background-image: url("../../home_header.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.introduce {
+    background-color: white;
+    background-size: cover;
+    width: 100%;
+    height: 40vh;
+}
+
+.exercise_itr {
+    background-image: url("../../exercise_header.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    filter: brightness(20%);
+}
+
+.meal_itr {
+    background-image: url("../../meal_header.jpeg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    filter: brightness(30%);
+}

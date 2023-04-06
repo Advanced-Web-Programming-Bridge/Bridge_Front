@@ -1,4 +1,4 @@
-import "./Exercise.css";
+import "./style/exercise.css";
 import styled from 'styled-components';
 
 const introduce =

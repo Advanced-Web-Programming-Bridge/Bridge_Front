@@ -1,9 +1,9 @@
 import ProgressBar from "react-animated-progress-bar";
 import { useState } from "react";
-import "./Exercise.css";
-import { ExerciseContext } from "./ExerciseContext";
-import TodayList from "./TodayList";
-import StyledCalendar from "../components/calendar.js";
+import "./style/exercise.css";
+import { ExerciseContext } from "./exerciseContext";
+import TodayList from "./todayList";
+import StyledCalendar from "./calendar.js";
 
 function ExerciseBody() {
   const [percent, setPercent] = useState(0);

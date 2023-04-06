@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import "./navbar.css";
+import "./style/navbar.css";
 
 function OffcanvasExample() {
   return (
@@ -13,7 +13,7 @@ function OffcanvasExample() {
         <Navbar key={expand} bg="light" expand={expand}>
           <Container fluid className='navbar'>
             <Navbar.Brand href="#">
-              <img className="logo" src="./img/logo.png" alt="logo image"/> FitLog
+              <img className="logo" src="./fitlog.png"/> FitLog
             </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -28,13 +28,13 @@ function OffcanvasExample() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-center flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Exercise</Nav.Link>
-                  <Nav.Link href="#action3">Meal</Nav.Link>
+                  <Nav.Link href="/">Home</Nav.Link>
+                  <Nav.Link href="/exercise">Exercise</Nav.Link>
+                  <Nav.Link href="/meal">Meal</Nav.Link>
                 </Nav>
                 <Nav>
-                  <Nav.Link href="#action4">Login</Nav.Link>
-                  <Nav.Link href="#action5">Join</Nav.Link>
+                  <Nav.Link href="#action4"><button>Login</button></Nav.Link>
+                  <Nav.Link href="#action5"><button>Join</button></Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
