@@ -14,8 +14,8 @@ function App() {
       {/* <OffcanvasExample/>
       <Home/>
       <Footer/> */}
-      {/* <Exercise /> */}
-      <Meal />
+      <Exercise />
+      {/* <Meal /> */}
     </div>
   );
 }

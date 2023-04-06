@@ -7,6 +7,7 @@ import styled from "styled-components";
 import exercise from "../exercise_header.jpg";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import ExerciseList from "./exerciseList";
+import ExerciseTracker from "./exerciseTracker";
 
 const StyledBody = styled.div`
   margin-left: 10%;
@@ -39,6 +40,11 @@ const StyledExerciseImage = styled.div`
   margin-bottom: 10%;
   width: 100%;
   height: 60%;
+`;
+
+const StyledBody2 = styled.div`
+  width: 50%;
+  height: 100%;
 `;
 
 const StyledBody3 = styled.div`
@@ -75,6 +81,24 @@ function ExerciseBody() {
     ],
   };
 
+  const todayList = [
+    {
+      name: "벤치 프레스",
+      goal: 5,
+      todo: 3,
+    },
+    {
+      name: "덤벨 벤치 프레스",
+      goal: 5,
+      todo: 1,
+    },
+    {
+      name: "달리기",
+      goal: 1,
+      todo: 2,
+    },
+  ];
+
   return (
     <StyledBody>
       <h2>오늘 계획한 운동량입니다.</h2>
@@ -88,9 +112,11 @@ function ExerciseBody() {
         </StyledBody1>
 
         {/* 오늘 뭐 해야하는지 보여주는 화면. useContext를 활용해 하위 component에서 percent를 변경할 수 있도록 함 */}
-        <ExerciseContext.Provider value={{ percent, setPercent }}>
-          <TodayList />
-        </ExerciseContext.Provider>
+        <StyledBody2>
+          <ExerciseContext.Provider value={{ percent, setPercent }}>
+            <ExerciseTracker exercises={todayList} />
+          </ExerciseContext.Provider>
+        </StyledBody2>
       </StyledToday>
 
       <h2>과거에 수행하였거나, 미래에 실행할 예정인 운동입니다.</h2>
