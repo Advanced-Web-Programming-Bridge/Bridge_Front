@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
+import { ExerciseContext } from "./exerciseContext";
+import { Button } from "react-bootstrap";
 
 const styles = `
   table {
@@ -41,26 +43,47 @@ const StyledInnerDiv = styled.div`
   width: 90%;
 `;
 
-const StyledEditButton = styled.button`
+const StyledEditButton = styled(Button)`
   position: relative;
-  bottom: -3vh;
+  bottom: -1.5vh;
   right: 0;
   width: 100%;
 `;
 
 function ExerciseTracker({ exercises }) {
+  const { setPercent } = useContext(ExerciseContext);
+
   const [exerciseData, setExerciseData] = useState(
     exercises.map((exercise) => ({ name: exercise.name, count: [] }))
   );
 
   const handleInputChange = (index, event) => {
     const value = event.target.value;
-    setExerciseData((prevData) =>
-      prevData.map((exercise, idx) =>
+    setExerciseData((prevData) => {
+      const newData = prevData.map((exercise, idx) =>
         idx === index ? { ...exercise, count: [value] } : exercise
-      )
-    );
+      );
+      // 각 운동마다 진행한 횟수 합산
+      const total = newData.reduce((acc, exercise) => {
+        return acc + parseInt((exercise.count[0] || 0), 10);
+      }, 0);
+  
+      // 전체 운동의 목표 횟수 합
+      const goalTotal = exercises.reduce((acc, exercise) => {
+        return acc + exercise.goal;
+      }, 0);
+  
+      // 내가 진행한 횟수의 비율 계산
+      const percent = (total / goalTotal) * 100;
+      setPercent(percent);
+      console.log(total);
+      console.log(goalTotal);
+      console.log(percent);
+  
+      return newData;
+    });
   };
+  
 
   return (
     <StyledOuterDiv>
@@ -97,7 +120,8 @@ function ExerciseTracker({ exercises }) {
           </tbody>
         </table>
 
-        <StyledEditButton> Edit </StyledEditButton>
+        <StyledEditButton variant = "dark"> Edit </StyledEditButton>
+
       </StyledInnerDiv>
     </StyledOuterDiv>
   );
