@@ -1,18 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/navbar';
+import OffcanvasExample from './components/navbar';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './components/home';
-import "./App.css"
-import Exercise from './exercise/Exercise';
+import Footer from './components/footer';
+import Meal from './components/meal';
+import Exercise from './components/exercise';
 
 function App() {
   return (
     <div className="App">
-      {/* <NavBar/>
-      <Home/> */}
-      <Exercise />
+      {/* <OffcanvasExample/>
+      <Home/>
+      <Footer/> */}
+      {/* <Exercise /> */}
+      <Meal />
     </div>
   );
 }

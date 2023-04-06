@@ -1,0 +1,20 @@
+.home {
+    margin-top: 7vh; 
+}
+
+.header {
+    overflow: auto;
+    background-image: url(../../public/img/header_img.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.exercise {
+    margin-top: 0vh; 
+    background-image: url(../../public/img/header_img.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+

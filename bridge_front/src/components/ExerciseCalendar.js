@@ -1,6 +1,6 @@
 import Calendar from "react-calendar";
 import "../components/style/calendar.css";
-import { ExerciseContext } from "./ExerciseContext";
+import { ExerciseContext } from "./exerciseContext";
 import { useContext } from "react";
 import styled from "styled-components";
 

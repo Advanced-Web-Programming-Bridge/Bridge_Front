@@ -1,5 +1,5 @@
-import ExerciseBody from "./ExerciseBody";
-import ExerciseHeader from "./ExerciseHeader";
+import ExerciseBody from "./exerciseBody";
+import ExerciseHeader from "./exerciseHeader";
 
 function Exercise() {
   return (

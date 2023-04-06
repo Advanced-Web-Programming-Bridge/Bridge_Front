@@ -1,12 +1,12 @@
 import { useState } from "react";
-import "./Exercise.css";
-import { ExerciseContext } from "./ExerciseContext";
-import TodayList from "./TodayList";
-import ExerciseCalendar from "./ExerciseCalendar";
+import { ExerciseContext } from "./exerciseContext";
+import TodayList from "./todayList";
+import "./style/exercise.css";
+import ExerciseCalendar from "./exerciseCalendar";
 import styled from "styled-components";
-import exercise from "../static/image/exercise.jpg";
+import exercise from "../exercise_header.jpg";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import ExerciseList from "./ExerciseList";
+import ExerciseList from "./exerciseList";
 
 const StyledBody = styled.div`
   margin-left: 10%;
