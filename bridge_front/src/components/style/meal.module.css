@@ -1,6 +1,7 @@
 .meal_flexer{
     width: 100%;
     height: fit-content;
+    margin-top: 7vh;
 }
 
 /*Meal Header 사진 div*/
@@ -11,9 +12,7 @@
     background-image: url("../../meal_header.jpeg");
     background-repeat: no-repeat;
     Background-size: cover;
-    position: relative;
 }
-
 /*header button wrapper*/
 #header_ref_buttons{
     position: absolute;
