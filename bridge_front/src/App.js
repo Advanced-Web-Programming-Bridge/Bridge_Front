@@ -6,13 +6,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './components/home';
 import Footer from './components/footer';
 import Meal from './components/meal';
+import Exercise from './components/exercise';
 
 function App() {
   return (
     <div className="App">
-      <OffcanvasExample/>
+      {/* <OffcanvasExample/>
       <Home/>
-      <Footer/>
+      <Footer/> */}
+      {/* <Exercise /> */}
+      <Meal />
     </div>
   );
 }
