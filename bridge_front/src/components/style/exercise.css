@@ -1,7 +1,7 @@
 /* Exercise Header 전용 CSS */
 .header {
     background-color: black;
-    background-image: url("../static/image/exercise.jpg");
+    background-image: url("../../exercise_header.jpg");
     height: 50vh;
     position: relative;
 }

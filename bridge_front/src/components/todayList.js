@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import "./Exercise.css";
-import { ExerciseContext } from "./ExerciseContext";
+import "./style/exercise.css";
+import { ExerciseContext } from "./exerciseContext";
 
 // Todo: 현재 %값이 이상하게 적용됨. 수정 필요
 function TodayList() {
