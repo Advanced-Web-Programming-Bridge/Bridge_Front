@@ -7,15 +7,18 @@ import Home from './components/home';
 import Footer from './components/footer';
 import Meal from './components/meal';
 import Exercise from './components/exercise';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      {/* <OffcanvasExample/>
-      <Home/>
-      <Footer/> */}
-      <Exercise />
-      {/* <Meal /> */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/exercise" element={<Exercise />} />
+          <Route path="/meal" element={<Meal />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

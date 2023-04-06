@@ -1,9 +1,13 @@
 import React from "react";
 import "./style/home.css";
+import { Navbar } from "react-bootstrap";
+import OffcanvasExample from "./navbar";
+import Footer from "./footer";
 
 function Home(){
     return(
         <div className="home">
+          <OffcanvasExample/>
           <div className="header_div"></div>
           <div className="introduce"></div>
           <div className="exercise_itr">
@@ -15,7 +19,8 @@ function Home(){
             <p>기능</p>
             <h1> MEAL </h1>
             <p>목표 칼로리를 정하고 아침, 점심, 저녁의 칼로리를 기록하여 자신의 식단을 관리해보세요</p>
-          </div>  
+          </div>
+          <Footer/>
         </div>
         
 

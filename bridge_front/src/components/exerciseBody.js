@@ -100,7 +100,7 @@ function ExerciseBody() {
   ];
 
   return (
-    <StyledBody>
+    <StyledBody className="body_div">
       <h2>오늘 계획한 운동량입니다.</h2>
       <StyledBorder />
 

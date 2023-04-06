@@ -1,9 +1,9 @@
 /* Exercise Header 전용 CSS */
 .header {
+    margin-top: 7vh;
     background-color: black;
     background-image: url("../../exercise_header.jpg");
     height: 50vh;
-    position: relative;
 }
 
 .header-child {
@@ -48,6 +48,7 @@
 .record {
     display: flex;
     height: 40vh;
+    position: relative;
 }
 
 /*  */

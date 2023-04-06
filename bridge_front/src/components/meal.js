@@ -7,6 +7,8 @@ import './style/calendar.css'
 import moment from 'moment';
 import 'moment/locale/ko';
 import styled from 'styled-components';
+import OffcanvasExample from './navbar';
+import Footer from './footer';
 
 // 각 부분 구분하는 가로 줄
 const StyledHr = styled.hr`
@@ -44,6 +46,7 @@ const Meal = (props) => {
         //전체 Warpper
         <div className={styles.meal_flexer}>
             {/** Meal Header 사진 div*/}
+            <OffcanvasExample/>
             <div className={styles.meal_header}>
                 <p id={styles.header_text}>Meal</p>
                 {/* <div id={styles.header_ref_buttons}>
@@ -98,7 +101,7 @@ const Meal = (props) => {
                     <MealList sender_display = {'block'}/>
                 </div>
             </div>
-
+            <Footer/>
         </div>
     );
 }
