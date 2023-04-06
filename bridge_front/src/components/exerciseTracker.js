@@ -5,6 +5,7 @@ const styles = `
   table {
     border-collapse: collapse;
     table-layout: auto;
+    width: 100%;
   }
 
   th,
@@ -28,19 +29,23 @@ const StyledOuterDiv = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  display: inline-block;
 `;
 
 const StyledInnerDiv = styled.div`
+  justify-content: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 90%;
 `;
 
 const StyledEditButton = styled.button`
-  position: absolute;
-  top: -50px;
+  position: relative;
+  bottom: -3vh;
   right: 0;
+  width: 100%;
 `;
 
 function ExerciseTracker({ exercises }) {
@@ -60,7 +65,6 @@ function ExerciseTracker({ exercises }) {
   return (
     <StyledOuterDiv>
       <StyledInnerDiv>
-        <StyledEditButton> Edit </StyledEditButton>
         <style>{styles}</style>
         <table>
           <thead>
@@ -92,6 +96,8 @@ function ExerciseTracker({ exercises }) {
             ))}
           </tbody>
         </table>
+
+        <StyledEditButton> Edit </StyledEditButton>
       </StyledInnerDiv>
     </StyledOuterDiv>
   );
