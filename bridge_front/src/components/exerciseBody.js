@@ -137,8 +137,6 @@ function ExerciseBody() {
           </StyledBody4>
         </div>
       </StyledBody>
-
-      <StyledBorder />
     </>
   );
 }
