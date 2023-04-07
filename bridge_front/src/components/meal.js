@@ -48,7 +48,7 @@ const Meal = (props) => {
             {/** Meal Header 사진 div*/}
             <OffcanvasExample/>
             <div className={styles.meal_header}>
-                <p id={styles.header_text}>Meal</p>
+                <div id={styles.header_text}>Meal</div>
                 {/* <div id={styles.header_ref_buttons}>
                     <button id={styles.header_today_ref_btn} onClick={onTodayClick}>오늘 식단</button>
                     <button id={styles.header_monthly_ref_btn} onClick={onMonthlyClick}>이번달 식단 계획</button>
