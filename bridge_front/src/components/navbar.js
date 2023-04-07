@@ -5,6 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import "./style/navbar.css";
+import LoginButton from './loginbutton';
+import Joinutton from './joinbutton';
 
 function OffcanvasExample() {
   return (
@@ -27,14 +29,14 @@ function OffcanvasExample() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-center flex-grow-1 pe-3">
+                <Nav className="justify-content-center flex-grow-1 pe-3 align-items-center">
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/exercise">Exercise</Nav.Link>
                   <Nav.Link href="/meal">Meal</Nav.Link>
                 </Nav>
-                <Nav>
-                  <Nav.Link href="#action4"><button>Login</button></Nav.Link>
-                  <Nav.Link href="#action5"><button>Join</button></Nav.Link>
+                <Nav className="sign_up">
+                  <Nav.Link href="#action4"><LoginButton/></Nav.Link>
+                  <Nav.Link href="#action5"><Joinutton/></Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
