@@ -13,7 +13,6 @@ const StyledBody = styled.div`
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 5vh;
-  margin-bottom: 10vh;
   width: 80%;
 `;
 
