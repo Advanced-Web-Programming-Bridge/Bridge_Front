@@ -15,6 +15,7 @@ const ModalContainer = styled.div`
 `;
 
 const ModalContent = styled.div`
+  width: 40%;
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
@@ -23,7 +24,7 @@ const ModalContent = styled.div`
 
 const ButtonContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 20px;
 `;
 
