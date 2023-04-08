@@ -57,19 +57,19 @@ function ExerciseBody() {
       {
         category: "가슴",
         list: [
-          { name: "벤치 프레스", goal: 5 },
-          { name: "덤벨 벤치 프레스", goal: 5 },
-          { name: "클라인 벤치 프레스", goal: 5 },
-          { name: "딥스", goal: 5 },
-          { name: "케이블 크로스 오버", goal: 5 },
+          { id: 1, name: "벤치 프레스", goal: 5 },
+          { id: 2, name: "덤벨 벤치 프레스", goal: 5 },
+          { id: 3, name: "클라인 벤치 프레스", goal: 5 },
+          { id: 4, name: "딥스", goal: 5 },
+          { id: 5, name: "케이블 크로스 오버", goal: 5 },
         ],
       },
       {
         category: "유산소",
         list: [
-          { name: "달리기", goal: 5 },
-          { name: "자전거", goal: 5 },
-          { name: "등산", goal: 5 },
+          { id: 6, name: "달리기", goal: 5 },
+          { id: 7, name: "자전거", goal: 5 },
+          { id: 8, name: "등산", goal: 5 },
         ],
       },
     ],
