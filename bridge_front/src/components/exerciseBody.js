@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ExerciseContext } from "./exerciseContext";
-import TodayList from "./todayList";
 import "./style/exercise.css";
 import ExerciseCalendar from "./exerciseCalendar";
 import styled from "styled-components";
