@@ -6,6 +6,7 @@ import styled from "styled-components";
 import ExerciseList from "./exerciseList";
 import ExerciseTracker from "./exerciseTracker";
 import ExerciseProgress from "./exerciseProgress";
+import EditExerciseList from "./editExerciseList";
 
 const StyledBody = styled.div`
   margin-left: 10%;
@@ -48,6 +49,7 @@ const StyledBody4 = styled.div`
 function ExerciseBody() {
   const [percent, setPercent] = useState(0);
   const [date, setDate] = useState(new Date());
+  const [showModal, setShowModal] = useState(false);
 
   const exerciseData = {
     date: new Date().toString(),
@@ -103,11 +105,16 @@ function ExerciseBody() {
 
           {/* 오늘 뭐 해야하는지 보여주는 화면. useContext를 활용해 하위 component에서 percent를 변경할 수 있도록 함 */}
           <StyledBody2>
-            <ExerciseContext.Provider value={{ setPercent }}>
+            <ExerciseContext.Provider value={{ setPercent, setShowModal }}>
               <ExerciseTracker exercises={todayList} />
             </ExerciseContext.Provider>
           </StyledBody2>
+
         </StyledToday>
+
+        <ExerciseContext.Provider value={{ showModal, setShowModal }}>
+        <EditExerciseList />
+        </ExerciseContext.Provider>
 
         <h2>과거에 수행하였거나, 미래에 실행할 예정인 운동입니다.</h2>
         <StyledBorder />

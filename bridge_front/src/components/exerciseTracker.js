@@ -51,7 +51,7 @@ const StyledEditButton = styled(Button)`
 `;
 
 function ExerciseTracker({ exercises }) {
-  const { setPercent } = useContext(ExerciseContext);
+  const { setPercent, setShowModal } = useContext(ExerciseContext);
 
   const [exerciseData, setExerciseData] = useState(
     exercises.map((exercise) => ({ name: exercise.name, count: [] }))
@@ -116,7 +116,9 @@ function ExerciseTracker({ exercises }) {
           </tbody>
         </table>
 
-        <StyledEditButton variant="dark"> Edit </StyledEditButton>
+        <StyledEditButton variant="dark" onClick={() => setShowModal(true)}>
+          Edit
+        </StyledEditButton>
       </StyledInnerDiv>
     </StyledOuterDiv>
   );
