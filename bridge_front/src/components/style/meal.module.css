@@ -1,3 +1,7 @@
+/* *{
+    font-family: Pretended;
+} */
+
 .meal_flexer{
     width: 100%;
     height: fit-content;
@@ -46,7 +50,6 @@
     border-radius: 8px;
     text-align: center;
     background-color: skyblue;
-    font-family: Pretended;
     margin-left: 1rem;
 }
 /*헤더 우측 버튼 호버링*/
@@ -61,13 +64,17 @@
     /*글자 position 정중앙*/
     position: absolute;
     text-align: center;
-    top: 40%;
+    top: 20%;
 
     /*글씨 폰트 스타일*/
     color: white;
     font-weight: bold;
     font-size: 4em;
     font-family: Pretended;
+}
+
+#header_text_desc{
+    font-size: .3em;
 }
 
 /*Meal 오늘의 식단 정보 div*/
@@ -130,7 +137,7 @@
     vertical-align: middle;
 }
 .meal_list_target_cal > h4{
-    font-size: 4em;
+    font-size: 2em;
     font-family: Pretended;
     vertical-align: middle;
 }

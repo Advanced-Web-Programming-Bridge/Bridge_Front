@@ -48,7 +48,11 @@ const Meal = (props) => {
             {/** Meal Header 사진 div*/}
             <OffcanvasExample/>
             <div className={styles.meal_header}>
-                <div id={styles.header_text}>Meal</div>
+                <div id={styles.header_text}>
+                    <p>Meal</p>
+                    <p id={styles.header_text_desc}>FitLog는 식단 내용을 기록하고, 과거의 식단 기록을 볼 수 있는 건강한 삶을 위한 서비스입니다.<br />
+                        식단을 체크하고 목표에 맞게 관리하여 건강한 삶을 시작해 보세요</p>
+                </div>
                 {/* <div id={styles.header_ref_buttons}>
                     <button id={styles.header_today_ref_btn} onClick={onTodayClick}>오늘 식단</button>
                     <button id={styles.header_monthly_ref_btn} onClick={onMonthlyClick}>이번달 식단 계획</button>
