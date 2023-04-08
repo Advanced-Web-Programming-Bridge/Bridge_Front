@@ -51,7 +51,7 @@ const StyledEditButton = styled(Button)`
 `;
 
 function ExerciseTracker({ exercises }) {
-  const { setPercent } = useContext(ExerciseContext);
+  const { setPercent, setShowModal } = useContext(ExerciseContext);
 
   const [exerciseData, setExerciseData] = useState(
     exercises.map((exercise) => ({ name: exercise.name, count: [] }))
@@ -65,25 +65,21 @@ function ExerciseTracker({ exercises }) {
       );
       // 각 운동마다 진행한 횟수 합산
       const total = newData.reduce((acc, exercise) => {
-        return acc + parseInt((exercise.count[0] || 0), 10);
+        return acc + parseInt(exercise.count[0] || 0, 10);
       }, 0);
-  
+
       // 전체 운동의 목표 횟수 합
       const goalTotal = exercises.reduce((acc, exercise) => {
         return acc + exercise.goal;
       }, 0);
-  
+
       // 내가 진행한 횟수의 비율 계산
       const percent = (total / goalTotal) * 100;
       setPercent(percent);
-      console.log(total);
-      console.log(goalTotal);
-      console.log(percent);
-  
+
       return newData;
     });
   };
-  
 
   return (
     <StyledOuterDiv>
@@ -120,8 +116,9 @@ function ExerciseTracker({ exercises }) {
           </tbody>
         </table>
 
-        <StyledEditButton variant = "dark"> Edit </StyledEditButton>
-
+        <StyledEditButton variant="dark" onClick={() => setShowModal(true)}>
+          Edit
+        </StyledEditButton>
       </StyledInnerDiv>
     </StyledOuterDiv>
   );

@@ -16,17 +16,6 @@ const StyledInnerDiv = styled.div`
   height: 100%;
 `;
 
-const StyledCalendar = styled.div`
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: relative;
-`;
-
-// const StyledCalendar = styled(Calendar)`
-//   height: 100%;
-// `;
-
 function ExerciseCalendar() {
   const { setDate } = useContext(ExerciseContext);
 
@@ -40,9 +29,7 @@ function ExerciseCalendar() {
   return (
     <StyledOuterDiv>
       <StyledInnerDiv>
-        <StyledCalendar>
           <Calendar onClickDay={handleClick} />
-        </StyledCalendar>
       </StyledInnerDiv>
     </StyledOuterDiv>
   );

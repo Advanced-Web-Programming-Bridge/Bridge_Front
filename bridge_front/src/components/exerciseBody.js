@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { ExerciseContext } from "./exerciseContext";
-import TodayList from "./todayList";
 import "./style/exercise.css";
 import ExerciseCalendar from "./exerciseCalendar";
 import styled from "styled-components";
-import exercise from "../exercise_header.jpg";
-import ProgressBar from "react-bootstrap/ProgressBar";
 import ExerciseList from "./exerciseList";
 import ExerciseTracker from "./exerciseTracker";
+import ExerciseProgress from "./exerciseProgress";
+import EditExerciseList from "./editExerciseList";
 
 const StyledBody = styled.div`
   margin-left: 10%;
@@ -29,17 +28,7 @@ const StyledToday = styled.div`
 
 const StyledBody1 = styled.div`
   width: 50%;
-  padding-top: 5%;
-  padding-left: 3%;
-  padding-right: 3%;
-`;
-
-const StyledExerciseImage = styled.div`
-  background-image: url(${exercise});
-  background-size: cover;
-  margin-bottom: 10%;
-  width: 100%;
-  height: 60%;
+  height: 100%;
 `;
 
 const StyledBody2 = styled.div`
@@ -60,6 +49,7 @@ const StyledBody4 = styled.div`
 function ExerciseBody() {
   const [percent, setPercent] = useState(0);
   const [date, setDate] = useState(new Date());
+  const [showModal, setShowModal] = useState(false);
 
   const exerciseData = {
     date: new Date().toString(),
@@ -108,17 +98,23 @@ function ExerciseBody() {
         <StyledToday>
           {/* Image와 프로그래스바 */}
           <StyledBody1>
-            <StyledExerciseImage />
-            <ProgressBar animated now={percent} />
+            <ExerciseContext.Provider value={{ percent }}>
+              <ExerciseProgress />
+            </ExerciseContext.Provider>
           </StyledBody1>
 
           {/* 오늘 뭐 해야하는지 보여주는 화면. useContext를 활용해 하위 component에서 percent를 변경할 수 있도록 함 */}
           <StyledBody2>
-            <ExerciseContext.Provider value={{ setPercent }}>
+            <ExerciseContext.Provider value={{ setPercent, setShowModal }}>
               <ExerciseTracker exercises={todayList} />
             </ExerciseContext.Provider>
           </StyledBody2>
+
         </StyledToday>
+
+        <ExerciseContext.Provider value={{ showModal, setShowModal }}>
+        <EditExerciseList />
+        </ExerciseContext.Provider>
 
         <h2>과거에 수행하였거나, 미래에 실행할 예정인 운동입니다.</h2>
         <StyledBorder />
@@ -137,8 +133,6 @@ function ExerciseBody() {
           </StyledBody4>
         </div>
       </StyledBody>
-
-      <StyledBorder />
     </>
   );
 }

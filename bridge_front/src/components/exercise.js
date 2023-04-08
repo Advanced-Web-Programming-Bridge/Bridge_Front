@@ -1,4 +1,3 @@
-import { Navbar } from "react-bootstrap";
 import ExerciseBody from "./exerciseBody";
 import ExerciseHeader from "./exerciseHeader";
 import Footer from "./footer";
