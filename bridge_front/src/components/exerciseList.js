@@ -21,7 +21,6 @@ function ExerciseList(props) {
     "secondary",
     "success",
     "danger",
-    "warning",
     "info",
   ];
 
