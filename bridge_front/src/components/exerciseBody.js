@@ -109,11 +109,10 @@ function ExerciseBody() {
               <ExerciseTracker exercises={todayList} />
             </ExerciseContext.Provider>
           </StyledBody2>
-
         </StyledToday>
 
         <ExerciseContext.Provider value={{ showModal, setShowModal }}>
-        <EditExerciseList />
+          <EditExerciseList />
         </ExerciseContext.Provider>
 
         <h2>과거에 수행하였거나, 미래에 실행할 예정인 운동입니다.</h2>

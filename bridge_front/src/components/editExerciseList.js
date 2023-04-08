@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
 import { ExerciseContext } from "./exerciseContext";
+import AddExerciseModal from "./addExerciseModal";
 
 const ModalContainer = styled.div`
   position: fixed;
@@ -39,6 +40,7 @@ const Button = styled.button`
 
 function EditExerciseList() {
   const { showModal, setShowModal } = useContext(ExerciseContext);
+  const [showAddExercise, setShowAddExercise] = useState(false);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -58,7 +60,9 @@ function EditExerciseList() {
     };
   }, [showModal, setShowModal]);
 
-  const handleAdd = () => {};
+  const handleAdd = () => {
+    setShowAddExercise(true);
+  };
 
   const handleDelete = () => {};
 
@@ -70,6 +74,13 @@ function EditExerciseList() {
             <h1>어떤 작업을 하고 싶으세요?</h1>
             <ButtonContainer>
               <Button onClick={handleAdd}>운동 추가하기</Button>
+
+              <ExerciseContext.Provider
+                value={{ setShowModal, setShowAddExercise }}
+              >
+                {showAddExercise && <AddExerciseModal />}
+              </ExerciseContext.Provider>
+
               <Button onClick={handleDelete}>운동 삭제하기</Button>
             </ButtonContainer>
           </ModalContent>
