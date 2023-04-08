@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import { ExerciseContext } from "./exerciseContext";
 
@@ -40,15 +40,27 @@ const Button = styled.button`
 function EditExerciseList() {
   const { showModal, setShowModal } = useContext(ExerciseContext);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (showModal && !event.target.closest(".modal-content")) {
+        setShowModal(false);
+      }
+    };
+
+    if (showModal) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [showModal, setShowModal]);
+
   const handleAdd = () => {};
 
   const handleDelete = () => {};
-
-  const handleClickOutside = (event) => {
-    if (showModal && !event.target.closest(".modal-content")) {
-      setShowModal(false);
-    }
-  };
 
   return (
     <>
