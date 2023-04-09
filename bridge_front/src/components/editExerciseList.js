@@ -14,6 +14,7 @@ const ModalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 `;
 
 const ModalContent = styled.div`
@@ -88,7 +89,7 @@ function EditExerciseList() {
               >
                 {showAddExercise && <AddExerciseModal />}
               </ExerciseContext.Provider>
-              <Button onClick={handleDelete}>운동 삭제하기</Button>å
+              <Button onClick={handleDelete}>운동 삭제하기</Button>
               <ExerciseContext.Provider
                 value={{
                   exerciseData,

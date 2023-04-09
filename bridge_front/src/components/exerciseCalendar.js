@@ -7,13 +7,24 @@ import styled from "styled-components";
 const StyledOuterDiv = styled.div`
   width: 100%;
   height: 100%;
+  padding: 5%;
   position: relative;
 `;
 
 const StyledInnerDiv = styled.div`
+  display: flex;
+  justify-content: center;
   position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+`;
+
+const StyledCalendar = styled(Calendar)`
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 `;
 
 function ExerciseCalendar() {
@@ -29,7 +40,7 @@ function ExerciseCalendar() {
   return (
     <StyledOuterDiv>
       <StyledInnerDiv>
-          <Calendar onClickDay={handleClick} />
+        <StyledCalendar onClickDay={handleClick} />
       </StyledInnerDiv>
     </StyledOuterDiv>
   );
