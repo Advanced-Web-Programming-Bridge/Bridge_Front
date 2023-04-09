@@ -88,7 +88,7 @@ function EditExerciseList() {
               >
                 {showAddExercise && <AddExerciseModal />}
               </ExerciseContext.Provider>
-              <Button onClick={handleDelete}>운동 삭제하기</Button>å
+              <Button onClick={handleDelete}>운동 삭제하기</Button>
               <ExerciseContext.Provider
                 value={{
                   exerciseData,
