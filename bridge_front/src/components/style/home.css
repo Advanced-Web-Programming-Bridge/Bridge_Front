@@ -4,12 +4,11 @@
     background-size:cover;
     background-repeat: no-repeat;
     height: 100vh;
-    color: #32cd32;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    filter: brightness(80%);
 }
 
 
@@ -17,22 +16,24 @@
     display: flex;
     height: 5vh;
     font-size: 20px;
-    font-family:fantasy;
-
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 .header_text2 {
     display: flex;
-    width: 947px;
+    width: 1139px;
     height: 15vh;
     font-size: 80px;
-    font-family:fantasy; 
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 .header_text3 {
     display: flex;
     height: 5vh;
     font-size: 30px;
-    font-family:fantasy;
+    font-family:sans-serif;
     padding-bottom: 7vh; 
+    font-weight: bold;
 }
 
 
@@ -52,30 +53,34 @@
     display: flex;
     height: 5vh;
     font-size: 20px;
-    font-family:fantasy;
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 
 .intro_text2 {
     display: flex;
-    width: 898px;
+    width: 1076px;
     height: 10vh;
     font-size: 80px;
-    font-family:fantasy; 
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 
 .intro_text3 {
     display: flex;
-    width: 1026px;
+    width: 1241px;
     height: 15vh;
     font-size: 80px;
-    font-family:fantasy; 
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 
 .intro_text4 {
     display: flex;
     height: 5vh;
     font-size: 30px;
-    font-family:fantasy;
+    font-family: sans-serif;
+    font-weight: bold; 
     padding-bottom: 7vh; 
 }
 
@@ -87,24 +92,33 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    font-family:fantasy;
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 .intro2_text1 {
     font-style: italic;
     font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 5vh; 
 }
 
 .intro2_text2 {
     font-style: italic;
     font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 5vh;  
 }
 
 .intro1_img {
-    width: 15vw;
+    width: 20vw;
+    height: 25vh;
 }
 
 .intro2_img {
-    width: 15vw;
+    width: 20vw;
+    height: 25vh;
 }
 
 
@@ -112,14 +126,14 @@
     background-image: url("../../exercise_header.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    filter: brightness(70%);
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: #32cd32;
-    font-family:fantasy;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 
 .exer_text1 {  
@@ -130,39 +144,32 @@
 
 .exer_text2 {
     display: flex;
-    width: 290px;
+    width: 355px;
     height: 13vh;
     font-size: 80px;
 }
 
 .exer_text3 {
     display: flex;
-    width: 554px;
+    width: 578px;
     height: 10vh;
     font-size: 25px;
-    font-family:fantasy; 
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 
 .meal_itr {
-    background-image: url("../../meal_header.jpeg");
+    background-image: url("../../meal_header.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 70vh;
-    filter: brightness(30%);
-}
-
-.meal_itr {
-    background-image: url("../../meal_header.jpeg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    filter: brightness(70%);
     height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: #32cd32;
-    font-family:fantasy;
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold; 
 }
 
 .meal_text1 {  
@@ -173,7 +180,7 @@
 
 .meal_text2 {
     display: flex;
-    width: 158px;
+    width: 220px;
     height: 13vh;
     font-size: 80px;
 }
@@ -183,5 +190,6 @@
     width: 554px;
     height: 10vh;
     font-size: 25px;
-    font-family:fantasy; 
+    font-family: sans-serif;
+    font-weight: bold; 
 }
