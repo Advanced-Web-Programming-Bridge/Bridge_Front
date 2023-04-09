@@ -51,7 +51,7 @@ function ExerciseBody() {
   const [date, setDate] = useState(new Date());
   const [showModal, setShowModal] = useState(false);
 
-  const exerciseData = {
+  const [exerciseData, setExerciseData] = useState({
     date: new Date().toString(),
     exerciseList: [
       {
@@ -73,7 +73,7 @@ function ExerciseBody() {
         ],
       },
     ],
-  };
+  });
 
   const todayList = [
     {
@@ -115,7 +115,9 @@ function ExerciseBody() {
           </StyledBody2>
         </StyledToday>
 
-        <ExerciseContext.Provider value={{ showModal, setShowModal }}>
+        <ExerciseContext.Provider
+          value={{ exerciseData, setExerciseData, showModal, setShowModal }}
+        >
           <EditExerciseList />
         </ExerciseContext.Provider>
 
