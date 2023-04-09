@@ -21,6 +21,7 @@ function ExerciseList(props) {
     "secondary",
     "success",
     "danger",
+    "warning",
     "info",
   ];
 
@@ -39,7 +40,7 @@ function ExerciseList(props) {
                 <Card.Body>
                   <ul style={{ listStyle: "none", paddingLeft: 0 }}>
                     <li style={{ color: "#fff" }}>
-                      {exercise.list.join(", ")}
+                      {exercise.list.map((item) => item.name).join(", ")}
                     </li>
                   </ul>
                 </Card.Body>
