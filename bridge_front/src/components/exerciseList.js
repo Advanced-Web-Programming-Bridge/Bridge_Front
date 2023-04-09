@@ -6,11 +6,13 @@ const StyledOuterDiv = styled.div`
   height: 100%;
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
 `;
 
 const StyledInnerDiv = styled.div`
   position: absolute;
+  width: 80%
 `;
 
 function ExerciseList(props) {
