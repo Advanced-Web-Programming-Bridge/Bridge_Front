@@ -1,0 +1,6 @@
+/* Exercise Body 전용 CSS */
+.record {
+    display: flex;
+    height: 50vh;
+    position: relative;
+}
