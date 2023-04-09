@@ -13,6 +13,8 @@ const StyledHeader = styled.div`
   width: 100%;
   height: 50vh;
   position: relative;
+  background-size:cover;
+  background-repeat: no-repeat;
 `;
 
 const StyledHeaderChild = styled.div`
@@ -20,17 +22,19 @@ const StyledHeaderChild = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  font-weight: bold; 
 `;
 
 const StyledExercise = styled.div`
   font-size: 8vh;
-  color: black;
+  color: white;
 `;
 
 const StyledIntroduce = styled.div`
   white-space: pre-wrap;
   font-size: 2vh;
-  color: black;
+  color: white;
 `;
 
 function ExerciseHeader() {
